@@ -1,0 +1,53 @@
+# OWASP ZAP Rules Configuration
+# Format: rule_id    WARN/IGNORE    Description
+
+# SQL Injection
+40018    WARN    SQL Injection
+40019    WARN    SQL Injection - MySQL
+40020    WARN    SQL Injection - Hypersonic SQL
+40021    WARN    SQL Injection - Oracle
+40022    WARN    SQL Injection - PostgreSQL
+
+# XSS
+40012    WARN    Cross Site Scripting (Reflected)
+40014    WARN    Cross Site Scripting (Persistent)
+40016    WARN    Cross Site Scripting (Persistent) - Prime
+40017    WARN    Cross Site Scripting (Persistent) - Spider
+
+# Security Headers
+10020    WARN    X-Frame-Options Header Not Set
+10021    WARN    X-Content-Type-Options Header Missing
+10023    WARN    Information Disclosure - Debug Error Messages
+10027    WARN    Information Disclosure - Suspicious Comments
+10054    WARN    Cookie Without Secure Flag
+10055    WARN    CSP Header Not Set
+10056    WARN    X-Debug-Token Information Leak
+10061    WARN    X-AspNet-Version Response Header
+
+# Authentication
+10102    WARN    Session ID in URL Rewrite
+10105    WARN    Weak Authentication Method
+
+# Other Security Issues
+90001    WARN    Insecure JSF ViewState
+90019    WARN    Server Side Code Injection
+90020    WARN    Remote OS Command Injection
+90021    WARN    XPath Injection
+90022    WARN    Application Error Disclosure
+90023    WARN    XML External Entity Attack
+90024    WARN    Generic Padding Oracle
+90025    WARN    Expression Language Injection
+90026    WARN    SOAP Action Spoofing
+90027    WARN    Cookie Poisoning
+90028    WARN    Insecure HTTP Method
+90029    WARN    ELMAH Information Leak
+90030    WARN    WSDL File Passive Scanner
+
+# Ignore low-risk issues for faster scanning
+10010    IGNORE    Cookie No HttpOnly Flag
+10015    IGNORE    Re-examine Cache-control Directives
+10017    IGNORE    Cross-Domain JavaScript Source File Inclusion
+10019    IGNORE    Content-Type Header Missing
+10024    IGNORE    Information Disclosure - Sensitive Information in URL
+10025    IGNORE    Information Disclosure - Sensitive Information in HTTP Referrer Header
+10026    IGNORE    HTTP Parameter Override
